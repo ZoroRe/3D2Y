@@ -71,7 +71,7 @@ Spring 全家桶中需要通过 Netflix 的 [Hystrix](https://github.com/Netflix
 
 ##### 服务通讯
 
-服务通讯其实就是服务间调用，上面提到的一系列功能都是围绕服务通讯。服务通讯有两种方式，一种是 http ，一种是 rpc 。Spring 全家桶主要通过 http，其服务通讯使用 [Feign](https://github.com/OpenFeign/feign)，但其本质都是 http，所以其他 http 客户端都可以实现，比如 [Retrofit](https://github.com/square/retrofit) ，而 [Dubbo](http://dubbo.apache.org/zh-cn/) 是 rpc 的方式，其协议是自定义的 dubbo 协议，只能使用它自己的方式。
+服务通讯其实就是服务间调用，上面提到的一系列功能都是围绕服务通讯。服务通讯有两种方式，一种是 http ，一种是 rpc 。Spring 全家桶主要通过 http，其服务通讯使用 [Feign](https://github.com/OpenFeign/feign)，但其本质都是 http，所以其他 http 客户端都可以实现，比如 [Retrofit](https://github.com/square/retrofit) ，而 [Dubbo](http://dubbo.apache.org/zh-cn/) 是 rpc 的方式，其协议是自定义的 dubbo 协议，当然官方也支持其他一些 rpc 协议，但相对 rpc 会特殊点，不会像 http 那么通用，因此可支持调用的客户端选择也比较少，如果出现一些老系统想调用，也许 http 协议会相对 rpc 方便点。
 
 ##### 配置中心
 
